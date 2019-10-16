@@ -17,7 +17,10 @@ app.get('/', function (req, res) {
    // res.send('<html><body><h1>Hello World</h1></body></html>');
    res.sendFile(__dirname + '/index.html');
 });
-
+app.get('/login', function (req, res) {
+   // res.send('<html><body><h1>Hello World</h1></body></html>');
+   res.sendFile(__dirname + '/index.html');
+});
 app.get('/getdata', function (req, res) {
 	var URL="";
  	var sql = "select * from appinfo where bundleId="+req.query.appId+" order by bundleId desc";
