@@ -51,6 +51,6 @@ app.delete('/delete-data', function (req, res) {
     res.send('DELETE Request');
 });
 
-var server = app.listen(1337, function () {
+var server = app.listen(8080, function () {
     console.log('Node server is running..');
 });
