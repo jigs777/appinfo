@@ -23,7 +23,7 @@ app.get('/login', function (req, res) {
 });
 app.get('/getdata', function (req, res) {
 	var URL="";
- 	var sql = "select * from appinfo where bundleId="+req.query.appId+" order by bundleId desc";
+ 	var sql = "select * from appinfo where bundleId="+req.query.appId+" order by primy_key desc";
   	con.query(sql,function (result,fields,URL) {
     URL="{\"appId\":\""+fields[0].bundleId+"\",\"url\":\""+fields[0].address +"\",\"status\":\""+fields[0].status+"\"}";
    res.send(URL);
